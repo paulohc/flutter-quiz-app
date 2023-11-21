@@ -36,8 +36,10 @@ class _QuizState extends State<Quiz> {
 
     if (selectedAnswers.length == questions.length) {
       setState(() {
+        activityScreen = ResultsScreen(
+          chosenAnswers: selectedAnswers,
+        );
         selectedAnswers = [];
-        activityScreen = const ResultsScreen();
       });
     }
   }
