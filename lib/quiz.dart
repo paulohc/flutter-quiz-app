@@ -14,30 +14,30 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  List<String> selectedAnswers = [];
-  Widget? activityScreen;
+  List<String> _selectedAnswers = [];
+  Widget? _activityScreen;
 
   @override
   void initState() {
-    activityScreen = StartScreen(switchScreen);
+    _activityScreen = StartScreen(switchScreen);
     super.initState();
   }
 
   void switchScreen() {
     setState(() {
-      activityScreen = QuestionsScreen(
+      _activityScreen = QuestionsScreen(
         onSelectAnswer: chooseAnswer,
       );
     });
   }
 
   void chooseAnswer(String answer) {
-    selectedAnswers.add(answer);
+    _selectedAnswers.add(answer);
 
-    if (selectedAnswers.length == questions.length) {
+    if (_selectedAnswers.length == questions.length) {
       setState(() {
-        activityScreen = ResultsScreen(
-          chosenAnswers: selectedAnswers,
+        _activityScreen = ResultsScreen(
+          chosenAnswers: _selectedAnswers,
           onRestart: restartQuiz,
         );
       });
@@ -46,8 +46,8 @@ class _QuizState extends State<Quiz> {
 
   void restartQuiz() {
     setState(() {
-      selectedAnswers = [];
-      activityScreen = QuestionsScreen(
+      _selectedAnswers = [];
+      _activityScreen = QuestionsScreen(
         onSelectAnswer: chooseAnswer,
       );
     });
@@ -68,7 +68,7 @@ class _QuizState extends State<Quiz> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: activityScreen,
+          child: _activityScreen,
         ),
       ),
     );
