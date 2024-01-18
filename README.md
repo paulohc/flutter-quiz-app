@@ -1,16 +1,24 @@
 # quiz_app
 
-A new Flutter project.
+A quiz app with questions about Flutter.
 
-## Getting Started
+This project is a result of [Flutter & Dart - The Complete Guide](https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/) course.
 
-This project is a starting point for a Flutter application.
+Start Screen&nbsp;&nbsp;&nbsp;&nbsp; | Question Screen | Result Screen&nbsp;&nbsp;&nbsp;&nbsp;
+:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/paulohc/flutter-quiz-app/assets/18506267/e4439c34-5de1-4970-a25b-ff7db3212f02) | ![](https://github.com/paulohc/flutter-quiz-app/assets/18506267/2369d4aa-fbb6-453b-8eb7-aac59e537b4f) | ![](https://github.com/paulohc/flutter-quiz-app/assets/18506267/1840f49e-e015-4cf0-9b40-75966835a590)
 
-A few resources to get you started if this is your first Flutter project:
+## How to use
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Launch the app, so you will see the start screen. Tap `Start Quiz` button to answer the questions. The app will show the results screen with your score after answering 6 questions.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to run
+
+Open this project on Visual Studio Code editor (make sure Flutter plugin in installed), so press `Ctrl+F5` (you need to connect a physical device or an emulator).
+
+
+If you want to use the command line, navigate to this project folder and run the following command:
+
+```
+flutter run
+```
